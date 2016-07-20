@@ -1,0 +1,11 @@
+--- src/jobs/meltjob.cpp	2016-06-30 21:45:33.000000000 -0600
++++ meltjob-2.cpp	2016-07-12 22:54:00.360113879 -0600
+@@ -54,7 +54,7 @@
+ #ifdef Q_OS_WIN
+     QFileInfo meltPath(shotcutPath, "qmelt.exe");
+ #else
+-    QFileInfo meltPath(shotcutPath, "qmelt");
++    QFileInfo meltPath(shotcutPath, "mlt-melt");
+ #endif
+     setReadChannel(QProcess::StandardError);
+     QStringList args;
