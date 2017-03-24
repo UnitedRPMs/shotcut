@@ -6,8 +6,8 @@ License:        GPLv3+
 Group:          Applications/Multimedia
 Url:            http://www.shotcut.org/
 Source0:        https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
-Source1:	shotcut.desktop
-Patch:		mlt_path.patch
+Source1:	      https://raw.githubusercontent.com/UnitedRPMs/shotcut/master/SOURCES/shotcut.desktop
+Patch:	      https://raw.githubusercontent.com/UnitedRPMs/shotcut/master/SOURCES/mlt_path.patch
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Core) >= 5.2.0
