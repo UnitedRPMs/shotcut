@@ -1,13 +1,13 @@
 Name:           shotcut
-Version:        16.08
+Version:        17.03
 Release:        1%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
 Group:          Applications/Multimedia
 Url:            http://www.shotcut.org/
 Source0:        https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
-Source1:	      https://raw.githubusercontent.com/UnitedRPMs/shotcut/master/SOURCES/shotcut.desktop
-Patch:	      https://raw.githubusercontent.com/UnitedRPMs/shotcut/master/SOURCES/mlt_path.patch
+Source1:	https://raw.githubusercontent.com/UnitedRPMs/shotcut/master/shotcut.desktop
+Patch:	        https://raw.githubusercontent.com/UnitedRPMs/shotcut/master/mlt_path.patch
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Core) >= 5.2.0
@@ -74,6 +74,9 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+
+* Sat Mar 25 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 17.03-1
+- Updated 17.03-1
 
 * Wed Aug 24 2016 David Vásquez <davidjeremias82 AT gmail DOT com> - 16.08-1
 - Updated
