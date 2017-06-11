@@ -4,7 +4,7 @@
  
 Summary:        A free, open source, cross-platform video editor
  
-Version:        17.03
+Version:        17.06
  
 License:        GPLv3+
  
