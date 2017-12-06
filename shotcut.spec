@@ -1,5 +1,5 @@
 Name:           shotcut
-Version:        17.11
+Version:        17.12
 Release:        2%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -74,6 +74,9 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+
+* Wed Dec 06 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 17.12-2
+- Updated to 17.12
 
 * Sun Nov 05 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 17.11-2
 - Updated to 17.11
