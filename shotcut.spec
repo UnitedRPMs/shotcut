@@ -10,6 +10,7 @@ Source1:	shotcut.desktop
 Patch:	        mlt_path.patch
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
+BuildRequires:	qt5-linguist
 BuildRequires:  pkgconfig(Qt5Core) >= 5.2.0
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Multimedia)
