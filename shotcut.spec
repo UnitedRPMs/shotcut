@@ -73,6 +73,10 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_datadir}/shotcut/
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.shotcut.Shotcut.desktop
+%{_datadir}/icons/hicolor/64x64/apps/org.shotcut.Shotcut.png
+%{_datadir}/metainfo/org.shotcut.Shotcut.appdata.xml
+%{_datadir}/mime/packages/org.shotcut.Shotcut.xml
 
 %changelog
 
