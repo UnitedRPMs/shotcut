@@ -8,6 +8,8 @@ Url:            http://www.shotcut.org/
 Source0:        https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
 Source1:	shotcut.desktop
 Patch:	        mlt_path.patch
+# Thanks Arch Linux
+Patch1:		qt-5.11.patch
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:	qt5-linguist
@@ -49,6 +51,9 @@ video and audio filters are available.
 %prep
 %setup -n %{name}-%{version}
 %patch -p0
+%if 0%{?fedora} >= 29
+%patch1 -p1
+%endif
 
 
 %build
