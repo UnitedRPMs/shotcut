@@ -8,11 +8,9 @@ Url:            http://www.shotcut.org/
 Source0:        https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
 Source1:	shotcut.desktop
 Patch:	        mlt_path.patch
-# Thanks Arch Linux
-Patch1:		qt-5.11.patch
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
-BuildRequires:	qt5-linguist
+BuildRequires:  qt5-linguist
 BuildRequires:  pkgconfig(Qt5Core) >= 5.2.0
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Multimedia)
@@ -23,14 +21,14 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5WebKitWidgets)
 BuildRequires:  pkgconfig(Qt5X11Extras)
 BuildRequires:  pkgconfig(Qt5Xml)
-BuildRequires:  pkgconfig(mlt++)
-BuildRequires:  pkgconfig(mlt-framework)
-BuildRequires:	qt5-qtwebsockets-devel
+BuildRequires:  pkgconfig(mlt++) >= 6.10.0
+BuildRequires:  pkgconfig(mlt-framework) >= 6.10.0
+BuildRequires:  qt5-qtwebsockets-devel
 BuildRequires:  x264-devel
 
-Requires:	qt5-qtquickcontrols
-Requires:	qt5-qtgraphicaleffects
-Requires:	qt5-qtmultimedia
+Requires:       qt5-qtquickcontrols
+Requires:       qt5-qtgraphicaleffects
+Requires:       qt5-qtmultimedia
 Requires:       frei0r-plugins
 Requires:       ladspa
 Requires:       mlt
@@ -51,10 +49,6 @@ video and audio filters are available.
 %prep
 %setup -n %{name}-%{version}
 %patch -p0
-%if 0%{?fedora} >= 29
-%patch1 -p1
-%endif
-
 
 %build
 
