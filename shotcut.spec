@@ -91,7 +91,7 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 * Sat Aug 11 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 18.08.11-2 
 - Updated to 18.08.11
 
-* Wed Aug 02 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 18.08-2 
+* Thu Aug 02 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 18.08-2 
 - Updated to 18.08
 
 * Mon Jul 02 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 18.07-2 
