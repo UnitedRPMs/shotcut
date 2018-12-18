@@ -76,6 +76,7 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_datadir}/icons/hicolor/64x64/apps/org.shotcut.Shotcut.png
 %{_datadir}/metainfo/org.shotcut.Shotcut.appdata.xml
 %{_datadir}/mime/packages/org.shotcut.Shotcut.xml
+%{_mandir}/man1/shotcut.1.gz
 
 %changelog
 
