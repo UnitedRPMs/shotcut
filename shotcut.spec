@@ -1,5 +1,5 @@
 Name:           shotcut
-Version:        19.02.28
+Version:        19.04.30
 Release:        2%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -79,6 +79,9 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Sat Jun 01 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 19.04.30-2 
+- Updated to 19.04.30
 
 * Fri Mar 01 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 19.02.28-2 
 - Updated to 19.02.28
