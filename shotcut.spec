@@ -56,7 +56,11 @@ qmake-qt5 'CONFIG-=c++11' \
           QMAKE_STRIP="" \
           PREFIX=%{buildroot}%{_prefix} \
           QMAKE_CFLAGS+="%{optflags}" \
-          QMAKE_CXXFLAGS+="%{optflags}"
+          QMAKE_CXXFLAGS+="%{optflags}" \
+          QMAKE_CFLAGS_RELEASE="%{optflags}" \
+          SHOTCUT_VERSION=ARCH-%{version} \
+          QMAKE_CXXFLAGS_RELEASE="%{optflags}" \
+          DEFINES+=SHOTCUT_NOUPGRADE
 
 make V=1 %{?_smp_mflags}
 
