@@ -1,5 +1,22 @@
+#
+# spec file for package shotcut
+#
+# Copyright (c) 2020 UnitedRPMs.
+#
+# All modifications and additions to the file contributed by third parties
+# remain the property of their copyright owners, unless otherwise agreed
+# upon. The license for this file, and modifications and additions to the
+# file, is the same license as for the pristine package itself (unless the
+# license for the pristine package is not an Open Source License, in which
+# case the license is the MIT License). An "Open Source License" is a
+# license that conforms to the Open Source Definition (Version 1.9)
+# published by the Open Source Initiative.
+
+# Please submit bugfixes or comments via https://goo.gl/zqFJft
+#
+
 Name:           shotcut
-Version:        19.12.31
+Version:        20.02.17
 Release:        7%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -83,6 +100,9 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Thu Feb 20 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.02.17-7 
+- Updated to 20.02.17
 
 * Wed Jan 01 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 19.12.31-7 
 - Updated to 19.12.31
