@@ -15,6 +15,8 @@
 # Please submit bugfixes or comments via https://goo.gl/zqFJft
 #
 
+%define _legacy_common_support 1
+
 Name:           shotcut
 Version:        20.04.12
 Release:        7%{?dist}
@@ -69,8 +71,7 @@ video and audio filters are available.
 
 %build
 
-qmake-qt5 'CONFIG-=c++11' \
-          QMAKE_STRIP="" \
+%{qmake_qt5} QMAKE_STRIP="" \
           PREFIX=%{buildroot}%{_prefix} \
           QMAKE_CFLAGS+="%{optflags}" \
           QMAKE_CXXFLAGS+="%{optflags}" \
@@ -107,7 +108,7 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 * Mon Apr 06 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.04.05-7 
 - Updated to 20.04.05
 
-* Fri Mar 03 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.04.01-7 
+* Tue Mar 03 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.04.01-7 
 - Updated to 20.04.01
 
 * Thu Feb 20 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.02.17-7 
