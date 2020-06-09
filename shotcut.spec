@@ -95,14 +95,14 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/applications/org.shotcut.Shotcut.desktop
-%{_datadir}/icons/hicolor/64x64/apps/org.shotcut.Shotcut.png
+%{_datadir}/icons/hicolor/*/apps/org.shotcut.Shotcut.png
 %{_datadir}/metainfo/org.shotcut.Shotcut.appdata.xml
 %{_datadir}/mime/packages/org.shotcut.Shotcut.xml
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
 
-* Mon Jun 09 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.06.05-7 
+* Mon Jun 08 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.06.05-7 
 - Updated to 20.06.05
 
 * Sun Apr 12 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.04.12-7 
