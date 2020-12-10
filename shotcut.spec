@@ -18,7 +18,7 @@
 %define _legacy_common_support 1
 
 Name:           shotcut
-Version:        20.09.27
+Version:        20.11.28
 Release:        7%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -27,6 +27,7 @@ Url:            http://www.shotcut.org/
 Source0:        https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
 Source1:	shotcut.desktop
 Patch:	        mlt_path.patch
+
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  qt5-linguist
@@ -42,6 +43,14 @@ BuildRequires:  pkgconfig(Qt5X11Extras)
 BuildRequires:  pkgconfig(Qt5Xml)
 BuildRequires:  pkgconfig(mlt++) >= 6.10.0
 BuildRequires:  pkgconfig(mlt-framework) >= 6.10.0
+BuildRequires:  pkgconfig(Qt5QuickControls2)
+BuildRequires:  pkgconfig(Qt5Multimedia)
+BuildRequires:  pkgconfig(Qt5WebSockets)
+BuildRequires:  pkgconfig(Qt5UiTools)
+BuildRequires:  desktop-file-utils
+BuildRequires:  doxygen
+BuildRequires:  libappstream-glib
+BuildRequires:  webvfx-devel
 BuildRequires:  qt5-qtwebsockets-devel
 BuildRequires:  x264-devel
 
@@ -66,11 +75,9 @@ transport control are assisted by OpenGL GPU-based processing and a number of
 video and audio filters are available.
 
 %prep
-%setup -n %{name}-%{version}
-%patch -p0
+%autosetup -n %{name}-%{version} -p1
 
 %build
-
 %{qmake_qt5} QMAKE_STRIP="" \
           PREFIX=%{buildroot}%{_prefix} \
           QMAKE_CFLAGS+="%{optflags}" \
@@ -78,13 +85,14 @@ video and audio filters are available.
           QMAKE_CFLAGS_RELEASE="%{optflags}" \
           SHOTCUT_VERSION=ARCH-%{version} \
           QMAKE_CXXFLAGS_RELEASE="%{optflags}" \
-          DEFINES+=SHOTCUT_NOUPGRADE
+          DEFINES+=SHOTCUT_NOUPGRADE 
 
-make V=1 %{?_smp_mflags}
-
+%make_build
 
 %install
+
 %make_install V=1
+
 install -D icons/%{name}-logo-64.png %{buildroot}/%{_datadir}/pixmaps/%{name}.png
 install -D --mode=644 %{S:1} %{buildroot}/usr/share/applications/shotcut.desktop
 chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
@@ -101,6 +109,9 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Mon Dec 07 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.11.28-7 
+- Updated to 20.11.28
 
 * Mon Sep 28 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.09.27-7 
 - Updated to 20.09.27
