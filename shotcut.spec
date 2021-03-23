@@ -1,7 +1,7 @@
 #
 # spec file for package shotcut
 #
-# Copyright (c) 2020 UnitedRPMs.
+# Copyright (c) 2021 UnitedRPMs.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -18,7 +18,7 @@
 %define _legacy_common_support 1
 
 Name:           shotcut
-Version:        20.11.28
+Version:        21.03.21
 Release:        7%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -104,11 +104,17 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/applications/org.shotcut.Shotcut.desktop
 %{_datadir}/icons/hicolor/*/apps/org.shotcut.Shotcut.png
-%{_datadir}/metainfo/org.shotcut.Shotcut.appdata.xml
+%{_datadir}/metainfo/*.metainfo.xml
 %{_datadir}/mime/packages/org.shotcut.Shotcut.xml
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Sat Mar 20 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.03.21-7 
+- Updated to 21.03.21
+
+* Mon Feb 01 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.01.29-7 
+- Updated to 21.01.29
 
 * Mon Dec 07 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 20.11.28-7 
 - Updated to 20.11.28
