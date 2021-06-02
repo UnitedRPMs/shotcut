@@ -18,7 +18,7 @@
 %define _legacy_common_support 1
 
 Name:           shotcut
-Version:        21.03.21
+Version:        21.05.18
 Release:        7%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -26,7 +26,6 @@ Group:          Applications/Multimedia
 Url:            http://www.shotcut.org/
 Source0:        https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
 Source1:	shotcut.desktop
-Patch:	        mlt_path.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(Qt5Concurrent)
@@ -41,12 +40,11 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5WebKitWidgets)
 BuildRequires:  pkgconfig(Qt5X11Extras)
 BuildRequires:  pkgconfig(Qt5Xml)
-BuildRequires:  pkgconfig(mlt++) >= 6.10.0
-BuildRequires:  pkgconfig(mlt-framework) >= 6.10.0
 BuildRequires:  pkgconfig(Qt5QuickControls2)
 BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:  pkgconfig(Qt5WebSockets)
 BuildRequires:  pkgconfig(Qt5UiTools)
+BuildRequires:  mlt7-devel
 BuildRequires:  desktop-file-utils
 BuildRequires:  doxygen
 BuildRequires:  libappstream-glib
@@ -59,7 +57,7 @@ Requires:       qt5-qtgraphicaleffects
 Requires:       qt5-qtmultimedia
 Requires:       frei0r-plugins
 Requires:       ladspa
-Requires:       mlt
+Requires:       mlt7
 Requires:       lame
 Requires:       ffmpeg
 
@@ -109,6 +107,10 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Sat May 29 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.05.18-7 
+- Updated to 21.05.18
+- Requires mlt7
 
 * Sat Mar 20 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.03.21-7 
 - Updated to 21.03.21

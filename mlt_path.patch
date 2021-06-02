@@ -1,12 +1,15 @@
 diff -ruN orig/src/jobs/meltjob.cpp new/src/jobs/meltjob.cpp
---- orig/src/jobs/meltjob.cpp	2020-11-28 11:58:25.000000000 -0600
-+++ new/src/jobs/meltjob.cpp	2020-12-09 14:00:44.281331487 -0600
-@@ -95,7 +95,7 @@
-         return;
+--- orig/src/jobs/meltjob.cpp	2021-05-17 23:34:22.000000000 -0600
++++ new/src/jobs/meltjob.cpp	2021-05-30 17:41:47.831780668 -0600
+@@ -96,9 +96,9 @@
      }
      QString shotcutPath = qApp->applicationDirPath();
+ #if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
+-    QFileInfo meltPath(shotcutPath, "melt-7");
++    QFileInfo meltPath(shotcutPath, "mlt-melt");
+ #else
 -    QFileInfo meltPath(shotcutPath, "melt");
 +    QFileInfo meltPath(shotcutPath, "mlt-melt");
+ #endif
      setReadChannel(QProcess::StandardError);
      QStringList args;
-     args << "-verbose";
