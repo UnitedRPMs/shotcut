@@ -18,7 +18,7 @@
 %define _legacy_common_support 1
 
 Name:           shotcut
-Version:        21.05.18
+Version:        21.06.29
 Release:        7%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -58,6 +58,7 @@ Requires:       qt5-qtmultimedia
 Requires:       frei0r-plugins
 Requires:       ladspa
 Requires:       mlt7
+Requires:       python3-mlt7
 Requires:       lame
 Requires:       ffmpeg
 
@@ -107,6 +108,9 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Thu Jul 08 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.06.29-7 
+- Updated to 21.06.29
 
 * Sat May 29 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.05.18-7 
 - Updated to 21.05.18
