@@ -1,7 +1,7 @@
 #
 # spec file for package shotcut
 #
-# Copyright (c) 2021 UnitedRPMs.
+# Copyright (c) 2022 UnitedRPMs.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -18,7 +18,7 @@
 %define _legacy_common_support 1
 
 Name:           shotcut
-Version:        21.12.24
+Version:        22.03.30
 Release:        7%{?dist}
 Summary:        A free, open source, cross-platform video editor
 License:        GPLv3+
@@ -44,7 +44,7 @@ BuildRequires:  pkgconfig(Qt5QuickControls2)
 BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:  pkgconfig(Qt5WebSockets)
 BuildRequires:  pkgconfig(Qt5UiTools)
-BuildRequires:  mlt7-devel
+BuildRequires:  mlt7-devel >= 7.6.0
 BuildRequires:  desktop-file-utils
 BuildRequires:  doxygen
 BuildRequires:  libappstream-glib
@@ -53,6 +53,8 @@ BuildRequires:  qt5-qtwebsockets-devel
 BuildRequires:  x264-devel
 #
 BuildRequires:  libsndfile
+BuildRequires:  opus
+BuildRequires:  libogg
 BuildRequires:  flac-libs
 #
 Requires:       qt5-qtquickcontrols
@@ -111,6 +113,12 @@ chmod a+x %{buildroot}/usr/share/shotcut/qml/export-edl/rebuild.sh
 %{_mandir}/man1/shotcut.1.gz
 
 %changelog
+
+* Thu Mar 31 2022 Unitedrpms Project <unitedrpms AT protonmail DOT com> 22.03.30-7 
+- Updated to 22.03.30
+
+* Tue Feb 08 2022 Unitedrpms Project <unitedrpms AT protonmail DOT com> 22.01.30-7 
+- Updated to 22.01.30
 
 * Sat Dec 25 2021 Unitedrpms Project <unitedrpms AT protonmail DOT com> 21.12.24-7 
 - Updated to 21.12.24
